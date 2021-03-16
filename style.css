@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+div {
+    padding: 355px 0
+}
+form {
+  position: relative;
+  width: 302px;
+  margin: 0 auto;
+}
+.d1 {background: #A3D0C3;}
+.d1 input {
+  width: 452px;
+  height: 62px;
+  padding-left: 10px;
+  border: 2px solid red;
+  border-radius: 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #9E9C9C;
+}
+.d1 button {
+  position: absolute; 
+  top: 0;
+  right: -208px;
+  width: 62px;
+  height: 62px;
+  border: none;
+  background: green;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.d1 button:before {
+  content: "найти";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
+}
