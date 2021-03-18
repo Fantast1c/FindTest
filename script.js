@@ -43,40 +43,40 @@ if(search.value==input_message){
     }
 
 // 7 Создать массив из чисел в перемешку (не отсортированы). С помощью цикла for найти максимальный и минимальный элементы в массиве
-function getRandomIntInclusive(min, max) {
+/*function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
-}
+}*/
 
-function getMax() {
-
-        let array = [];
-        let max=-10;
-        let min=9;
-
-        // заполняем объектами
-        for(let i =0; i < 20; i++) {
-            array.push(getRandomIntInclusive(-10, 9));
-        }
-
-        array.forEach((value) => {
-            if(value > max) {
-                max = value;
-            }
-        })
-    
-     array.forEach((value) => {
-            if(value < min) {
-                min = value;
-            }
-        })
-
-        console.log(array);
-        console.log('Максимальный элемент', max);
-        console.log('Минимальный элемент', min)
+ let arr = [0,1,-121,3300, 45,-3,3333, -555555],
+      fMax,
+      fMin;
+  function getMax(arr) {
+    let arrLen = arr.length,
+        maxEl = arr[0];
+    for (let i = 0; i < arrLen; i++) {
+      if (maxEl < arr[i]) {
+        maxEl = arr[i];
+      }
     }
-getMax();
+    return maxEl;
+  }
+  function getMin(arr) {
+    let arrLen = arr.length,
+        minEl = arr[0];
+    for (let i = 0; i < arrLen; i++) {
+      if (minEl > arr[i]) {
+        minEl = arr[i];
+      }
+    }
+    return minEl;
+  }
+  fMax = getMax(arr);
+  fMin = getMin(arr);
+    console.log(arr);
+    console.log('Максимальный элемент', fMax, 'Минимальный элемент', fMin); 
+    
 
 /*8. Создать 2 переменные a и b… присвоить им любые значения. Потом программно поменять эти значения местами, не используя значения напрямую
 let a = "XXX"; 
